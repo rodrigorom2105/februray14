@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "valentine-bear",
+      "description": "A cute teddy bear with a heart",
+      "imageUrl": "https://images.unsplash.com/photo-1581793034372-3689c59f2106?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0ZWRkeSUyMGJlYXIlMjBoZWFydHxlbnwwfHx8fDE3NzA0ODQ5MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teddy bear heart"
+    },
+    {
+      "id": "happy-couple",
+      "description": "A happy couple celebrating love",
+      "imageUrl": "https://images.unsplash.com/photo-1556659174-f9042009b872?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxoYXBweSUyMGNvdXBsZXxlbnwwfHx8fDE3NzA0ODQ5MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy couple"
+    },
+    {
+      "id": "celebration-cats",
+      "description": "Two cute cats cuddling",
+      "imageUrl": "https://images.unsplash.com/photo-1759747671153-815cffd68b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjdXRlJTIwY2F0cyUyMGN1ZGRsaW5nfGVufDB8fHx8MTc3MDQ4NDkxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cute cats cuddling"
+    }
+  ]
 }
