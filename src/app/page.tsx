@@ -99,7 +99,7 @@ export default function ValentineAskPage() {
               paddingBottom: isTooBig ? '0' : `${paddingY}px`,
               fontSize: isTooBig ? '4rem' : `${fontSize}px`,
             }}
-            className={`bg-[#32CD32] hover:bg-[#2EB82E] text-white rounded-full shadow-2xl transition-all duration-300 ease-out active:scale-95 whitespace-nowrap leading-none font-bold ${
+            className={`bg-[#32CD32] hover:bg-[#2EB82E] text-white rounded-full shadow-2xl transition-all duration-300 ease-out active:scale-95 whitespace-nowrap leading-none font-bold min-w-[140px] ${
               isTooBig ? "fixed inset-0 w-full h-full rounded-none flex items-center justify-center m-0 z-[100]" : "relative z-50"
             }`}
           >
