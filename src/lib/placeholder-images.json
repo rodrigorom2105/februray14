@@ -2,21 +2,43 @@
   "placeholderImages": [
     {
       "id": "foto_1",
-      "description": "Momento romántico",
-      "imageUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=600&h=600&auto=format&fit=crop",
-      "imageHint": "romantic heart"
+      "description": "Navidad juntos 🎅",
+      "imageUrl": "/images/foto1.jpeg"
     },
     {
       "id": "foto_2",
-      "description": "Cena juntos",
-      "imageUrl": "https://images.unsplash.com/photo-1516589174184-c68526671ee6?q=80&w=600&h=600&auto=format&fit=crop",
-      "imageHint": "happy couple"
+      "description": "Tu cumple",
+      "imageUrl": "/images/foto2.jpeg"
     },
     {
       "id": "foto_3",
-      "description": "Caminata de la mano",
-      "imageUrl": "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=600&h=600&auto=format&fit=crop",
-      "imageHint": "couple walking"
+      "description": "Viajecito 🌳",
+      "imageUrl": "/images/foto3.jpeg"
+    },
+    {
+      "id": "foto_4",
+      "description": "Ra rauw 🕺",
+      "imageUrl": "/images/foto4.jpeg"
+    },
+    {
+      "id": "foto_5",
+      "description": "Halloween 🎃",
+      "imageUrl": "/images/foto5.jpeg"
+    },
+    {
+      "id": "foto_6",
+      "description": "Date de ballet 🌃",
+      "imageUrl": "/images/foto6.jpeg"
+    },
+    {
+      "id": "foto_7",
+      "description": "Otra de tu cumple 🎂",
+      "imageUrl": "/images/foto7.jpeg"
+    },
+    {
+      "id": "foto_8",
+      "description": "Pedida :)",
+      "imageUrl": "/images/foto8.jpeg"
     }
   ]
 }
