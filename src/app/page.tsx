@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -43,9 +42,10 @@ export default function ValentineAskPage() {
     router.push("/confirm");
   };
 
-  const paddingX = 32 + noCount * 12;
-  const paddingY = 16 + noCount * 8;
-  const fontSize = 18 + noCount * 4;
+  // Valores iniciales sincronizados con el botón "No" (px-8, py-6, text-xl)
+  const paddingX = 32 + noCount * 12; // 32px = px-8
+  const paddingY = 24 + noCount * 8;  // 24px = py-6
+  const fontSize = 20 + noCount * 4;  // 20px = text-xl
   const isTooBig = noCount >= 10;
 
   const currentImage = PlaceHolderImages[currentImageIndex];
@@ -85,8 +85,8 @@ export default function ValentineAskPage() {
           </p>
         </div>
 
-        {/* Botones - Sistema de Flexbox para evitar solapamiento */}
-        <div className="flex flex-wrap items-center justify-center gap-8 w-full min-h-[150px] relative">
+        {/* Botones - Sistema de Flexbox para evitar solapamiento y centrado absoluto */}
+        <div className="flex flex-wrap items-center justify-center gap-6 w-full min-h-[160px] relative">
           <Button
             onClick={handleYesClick}
             style={{
@@ -107,7 +107,7 @@ export default function ValentineAskPage() {
             <Button
               variant="destructive"
               onClick={handleNoClick}
-              className="px-8 py-6 text-xl rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap shrink-0 z-40"
+              className="px-8 py-6 text-xl rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap shrink-0 z-40 font-bold"
             >
               {NO_MESSAGES[Math.min(noCount, NO_MESSAGES.length - 1)]}
             </Button>
