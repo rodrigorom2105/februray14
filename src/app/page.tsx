@@ -83,7 +83,7 @@ export default function ValentineAskPage() {
         </div>
 
         {/* Botones */}
-        <div className="flex flex-wrap items-center justify-center gap-6 min-h-[180px] w-full">
+        <div className="flex flex-wrap items-center justify-center gap-6 w-full">
           <Button
             onClick={handleYesClick}
             style={{
