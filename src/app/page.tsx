@@ -34,24 +34,26 @@ export default function ValentineAskPage() {
     router.push("/confirm");
   };
 
-  const yesScale = 1 + noCount * 0.45;
-  const noMessage = NO_MESSAGES[Math.min(noCount, NO_MESSAGES.length - 1)];
+  // Calculamos el tamaño dinámico para que afecte al layout y no se sobrelapen
+  const paddingX = 40 + noCount * 15;
+  const paddingY = 20 + noCount * 8;
+  const fontSize = 20 + noCount * 4;
   const isTooBig = noCount >= 12;
 
   const bearImage = PlaceHolderImages.find(img => img.id === "valentine-bear");
 
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-center p-4 overflow-hidden">
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-center p-6 overflow-hidden bg-background">
       <HeartBackground />
       
-      <div className="relative z-10 flex flex-col items-center gap-8 max-w-2xl w-full text-center">
-        <div className="relative w-64 h-64 md:w-80 md:h-80 animate-bounce duration-[2000ms]">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-10 max-w-3xl w-full text-center animate-in fade-in zoom-in duration-500">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 animate-bounce duration-[3000ms]">
           {bearImage && (
             <Image
               src={bearImage.imageUrl}
               alt={bearImage.description}
               fill
-              className="object-contain rounded-3xl"
+              className="object-contain rounded-3xl shadow-lg"
               data-ai-hint={bearImage.imageHint}
               priority
             />
@@ -60,16 +62,23 @@ export default function ValentineAskPage() {
           <Heart className="absolute -bottom-4 -left-4 text-primary w-8 h-8 fill-current animate-pulse delay-700" />
         </div>
 
-        <h1 className="font-headline text-4xl md:text-6xl text-primary font-bold drop-shadow-sm px-4 leading-tight">
+        <h1 className="font-headline text-4xl md:text-7xl text-primary font-bold drop-shadow-sm px-4 leading-tight">
           ¿Quieres ser mi San Valentín?
         </h1>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-8 w-full min-h-[100px]">
-          <div className="transition-all duration-300 ease-out" style={{ transform: `scale(${yesScale})` }}>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-4 w-full min-h-[120px]">
+          <div className="flex items-center justify-center">
             <Button
               onClick={handleYesClick}
-              className={`bg-[#32CD32] hover:bg-[#2EB82E] text-white px-10 py-6 text-xl rounded-full shadow-lg transition-all active:scale-95 ${
-                isTooBig ? "fixed inset-0 z-[100] w-full h-full rounded-none flex items-center justify-center text-4xl" : ""
+              style={{
+                paddingLeft: isTooBig ? '0' : `${paddingX}px`,
+                paddingRight: isTooBig ? '0' : `${paddingX}px`,
+                paddingTop: isTooBig ? '0' : `${paddingY}px`,
+                paddingBottom: isTooBig ? '0' : `${paddingY}px`,
+                fontSize: isTooBig ? '3rem' : `${fontSize}px`,
+              }}
+              className={`bg-[#32CD32] hover:bg-[#2EB82E] text-white rounded-full shadow-xl transition-all duration-300 ease-out active:scale-95 ${
+                isTooBig ? "fixed inset-0 z-[100] w-full h-full rounded-none flex items-center justify-center m-0" : ""
               }`}
             >
               Sí
@@ -77,18 +86,20 @@ export default function ValentineAskPage() {
           </div>
 
           {!isTooBig && (
-            <Button
-              variant="destructive"
-              onClick={handleNoClick}
-              className="px-8 py-6 text-xl rounded-full shadow-md transition-all active:scale-95 z-10"
-            >
-              {noMessage}
-            </Button>
+            <div className="flex items-center justify-center">
+              <Button
+                variant="destructive"
+                onClick={handleNoClick}
+                className="px-8 py-6 text-xl rounded-full shadow-md transition-all duration-300 hover:scale-105 active:scale-95 z-10 whitespace-nowrap"
+              >
+                {NO_MESSAGES[Math.min(noCount, NO_MESSAGES.length - 1)]}
+              </Button>
+            </div>
           )}
         </div>
       </div>
       
-      <footer className="absolute bottom-4 text-muted-foreground font-body italic">
+      <footer className="absolute bottom-6 text-muted-foreground font-body italic opacity-70">
         Hecho con amor para ti ❤️
       </footer>
     </main>
