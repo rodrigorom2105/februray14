@@ -44,7 +44,8 @@ export default function ValentineAskPage() {
     router.push("/confirm");
   };
 
-  const paddingX = 32 + noCount * 14; 
+  // Ambos inician con px-8 (32px), py-6 (24px) y texto xl (20px)
+  const paddingX = 32 + noCount * 15; 
   const paddingY = 24 + noCount * 10;  
   const fontSize = 20 + noCount * 6;  
   const isTooBig = noCount >= 10;
@@ -54,41 +55,41 @@ export default function ValentineAskPage() {
   if (!mounted) return null;
 
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-center p-4 bg-transparent overflow-hidden">
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-center bg-transparent overflow-hidden p-6">
       <HeartBackground />
       
-      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-2xl gap-8 text-center animate-in fade-in zoom-in duration-1000">
+      <div className="relative z-10 flex flex-col items-center gap-8 text-center max-w-2xl animate-in fade-in zoom-in duration-700">
         
-        {/* Contenedor de la imagen con tamaño fijo para evitar saltos */}
-        <div className="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
-          <div className="relative w-full h-full animate-bounce duration-[4000ms]">
+        {/* Imagen con tamaño fijo para estabilidad */}
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+          <div className="relative w-full h-full">
             {currentImage && (
               <Image
                 key={currentImage.id}
                 src={currentImage.imageUrl}
                 alt={currentImage.description}
                 fill
-                className="object-cover rounded-3xl shadow-2xl border-4 border-primary/30 transition-opacity duration-700"
+                className="object-cover rounded-3xl shadow-2xl border-4 border-primary/20 transition-opacity duration-500"
                 priority
+                data-ai-hint={currentImage.imageHint}
               />
             )}
             <Heart className="absolute -top-4 -right-4 text-primary w-10 h-10 fill-current animate-pulse opacity-80" />
-            <Heart className="absolute -bottom-2 -left-6 text-primary w-6 h-6 fill-current animate-pulse delay-500 opacity-60" />
           </div>
         </div>
 
-        {/* Pregunta */}
+        {/* Texto */}
         <div className="space-y-4">
-          <h1 className="font-headline text-4xl sm:text-6xl text-primary font-bold leading-tight drop-shadow-sm">
+          <h1 className="font-headline text-5xl sm:text-7xl text-primary font-bold leading-tight drop-shadow-sm">
             ¿Quieres ser mi San Valentín?
           </h1>
-          <p className="font-body text-lg sm:text-xl text-muted-foreground italic max-w-md mx-auto">
+          <p className="font-body text-xl text-muted-foreground italic max-w-md mx-auto">
             Cada momento a tu lado es un regalo que quiero conservar para siempre.
           </p>
         </div>
 
-        {/* Contenedor de Botones - Flexbox centrado que respeta el crecimiento */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 min-h-[160px] w-full relative">
+        {/* Botones */}
+        <div className="flex flex-wrap items-center justify-center gap-6 min-h-[180px] w-full">
           <Button
             onClick={handleYesClick}
             style={{
@@ -98,8 +99,8 @@ export default function ValentineAskPage() {
               paddingBottom: isTooBig ? '0' : `${paddingY}px`,
               fontSize: isTooBig ? '4rem' : `${fontSize}px`,
             }}
-            className={`bg-[#32CD32] hover:bg-[#2EB82E] text-white rounded-full shadow-2xl transition-all duration-300 ease-out active:scale-95 whitespace-nowrap leading-none font-bold shrink-0 ${
-              isTooBig ? "fixed inset-0 w-full h-full rounded-none flex items-center justify-center m-0 z-[100]" : "z-50"
+            className={`bg-[#32CD32] hover:bg-[#2EB82E] text-white rounded-full shadow-2xl transition-all duration-300 ease-out active:scale-95 whitespace-nowrap leading-none font-bold ${
+              isTooBig ? "fixed inset-0 w-full h-full rounded-none flex items-center justify-center m-0 z-[100]" : "relative z-50"
             }`}
           >
             ¡SÍ!
@@ -109,7 +110,7 @@ export default function ValentineAskPage() {
             <Button
               variant="destructive"
               onClick={handleNoClick}
-              className="px-8 py-6 text-xl rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap shrink-0 z-40 font-bold min-w-[140px]"
+              className="px-8 py-6 text-xl rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap font-bold min-w-[140px] z-40"
             >
               {NO_MESSAGES[Math.min(noCount, NO_MESSAGES.length - 1)]}
             </Button>

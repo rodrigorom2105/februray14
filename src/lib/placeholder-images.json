@@ -1,28 +1,22 @@
 {
   "placeholderImages": [
     {
-      "id": "nuestra_foto_1",
-      "description": "Un momento especial",
-      "imageUrl": "https://images.unsplash.com/photo-1514480657081-a987d9a45e90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb21hbnRpYyUyMGNvdXBsZXxlbnwwfHx8fDE3NzAzOTA5MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "romantic couple"
+      "id": "foto_1",
+      "description": "Momento romántico",
+      "imageUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=600&h=600&auto=format&fit=crop",
+      "imageHint": "romantic heart"
     },
     {
-      "id": "nuestra_foto_2",
-      "description": "Nuestras risas",
-      "imageUrl": "https://images.unsplash.com/photo-1726766406089-0308c800b6b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYXBweSUyMGNvdXBsZXxlbnwwfHx8fDE3NzA0ODQ5MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "foto_2",
+      "description": "Cena juntos",
+      "imageUrl": "https://images.unsplash.com/photo-1516589174184-c68526671ee6?q=80&w=600&h=600&auto=format&fit=crop",
       "imageHint": "happy couple"
     },
     {
-      "id": "nuestra_foto_3",
-      "description": "Viajes juntos",
-      "imageUrl": "https://images.unsplash.com/photo-1689702583997-d1f353f013fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmF2ZWwlMjBjb3VwbGV8ZW58MHx8fHwxNzcwNDg1OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "travel couple"
-    },
-    {
-      "id": "nuestra_foto_4",
-      "description": "Momentos tiernos",
-      "imageUrl": "https://images.unsplash.com/photo-1615860783459-b90de23b4b96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjdXRlJTIwY291cGxlfGVufDB8fHx8MTc3MDQ4NTkyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cute couple"
+      "id": "foto_3",
+      "description": "Caminata de la mano",
+      "imageUrl": "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=600&h=600&auto=format&fit=crop",
+      "imageHint": "couple walking"
     }
   ]
 }
